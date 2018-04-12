@@ -1,0 +1,24 @@
+:root {
+
+  // color
+  --color-brand: hsl(269, 80%, 55%);
+  --color-primary: hsl(0, 0%, 13%);
+  --color-secondary: hsl(0, 0%, 29%);
+  --color-tertiary: hsl(0, 0%, 45%);
+  --color-subtle: hsl(0, 0%, 97%);
+
+  // typography
+  --font-primary: 'Lato', sans-serif;
+
+  // font weight
+  --weight-heavy: 700;
+  --weight-light: 300;
+
+  // shadow
+  --shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+
+  // headers
+  --header-size: 5rem;
+  --header-font: var(--font-primary);
+  --header-align: center;
+}

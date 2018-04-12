@@ -1,0 +1,39 @@
+<nav>
+  <h1>Tyler Burkhardt</h1>
+  <p>Full Stack Web Developer</p>
+  <a class="logo" routerLink="/">
+    <img (click)="activeRoute=null" src="assets/images/tyler.jpg" alt="Tyler Burkhardt Headshot">
+  </a>
+  <ul class="nav-items">
+    <li class="nav-item" *ngFor="let route of routes">
+      <a routerLink="{{ route.path }}"
+         (click)="activeRoute = route"
+         [class.active]="route == activeRoute">
+        {{ route.name }}
+      </a>
+    </li>
+
+  </ul>
+  <ul class="social-items">
+    <li class="social-item">
+      <a href="https://github.com/tjb1019" target="_blank">
+        <i class="fa fa-2x fa-github"></i>
+      </a>
+    </li>
+    <li class="social-item">
+      <a href="https://www.linkedin.com/in/tjb1019" target="_blank">
+        <i class="fa fa-2x fa-linkedin"></i>
+      </a>
+    </li>
+    <li class="social-item">
+      <a href="https://twitter.com/tjb1019" target="_blank">
+        <i class="fa fa-2x fa-twitter"></i>
+      </a>
+    </li>
+    <li class="social-item">
+      <a href="https://medium.com/@tjb1019" target="_blank">
+        <i class="fa fa-2x fa-medium"></i>
+      </a>
+    </li>
+  </ul>
+</nav>

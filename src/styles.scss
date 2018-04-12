@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+@import 'utilities';
+@import 'osx';
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+main {
+  margin-left: 300px;
+}
+
+section {
+  padding: 0 100px;
+}
+
+h1 {
+  font-size: var(--header-size);
+  font-family: var(--header-font);
+  text-align: var(--header-align);
+}

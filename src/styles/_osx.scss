@@ -1,0 +1,38 @@
+@import 'variables';
+
+.osx {
+  width: 100%;
+  box-shadow: var(--shadow);
+  border-radius: 6px;
+
+  .osx-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    background: #e5e5e5;
+
+    .dot {
+      margin: 0 3px;
+      height: 11px;
+      width: 11px;
+      border-radius: 11px;
+
+      &.close {
+        background: #ff5c5c;
+      }
+
+      &.minimize {
+        background: #ffbd4c;
+      }
+
+      &.expand {
+        background: #00ca56;
+      }
+    }
+  }
+
+  .osx-body {
+    height: 500px;
+    background: var(--color-primary);
+  }
+}
