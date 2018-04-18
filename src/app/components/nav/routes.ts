@@ -17,11 +17,11 @@ export const routes = [
     name: 'Projects'
   },
   {
-    path: '/contact',
-    name: 'Contact'
+    path: '/experience',
+    name: 'Experience'
   },
   {
-    path: '/blog',
-    name: 'Blog'
-  },
+    path: '/contact',
+    name: 'Contact'
+  }
 ];

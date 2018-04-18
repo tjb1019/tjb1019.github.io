@@ -1,6 +1,7 @@
 @import 'variables';
 
 nav {
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,6 +14,12 @@ nav {
   color: white;
   border-top: 8px solid var(--color-brand);
   box-shadow: 4px 0 6px hsla(0, 0%, 0%, 0.2);
+  animation: slideInLeft 1s;
+
+  // burger icon
+  .burger {
+    display: none;
+  }
 
   // name
   h1 {
@@ -24,7 +31,7 @@ nav {
   p {
     font-size: 1.5rem;
     margin: 0;
-    color: var(--color-subtle);
+    color: var(--color-accent);
   }
 
   // headshot
@@ -32,7 +39,7 @@ nav {
     margin: 30px 0;
     height: 200px;
     width: 200px;
-    border: 3px solid white;
+    border: 5px solid white;
     border-radius: 50%;
   }
 
@@ -42,7 +49,10 @@ nav {
     margin: 0;
     width: 100%;
     list-style-type: none;
-    font-size: 2.5rem;
+    border-top: 1px solid hsla(0, 0%, 0%, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 2.2rem;
+    text-transform: uppercase;
 
     // nav item
     .nav-item {
@@ -50,16 +60,9 @@ nav {
       border-top: 1px solid rgba(255, 255, 255, 0.04);
       border-bottom: 1px solid hsla(0, 0%, 0%, 0.3);
 
-      &:nth-child(1) {
-        border-top: none;
-      }
-
-      &:nth-child(5) {
-        border-bottom: none;
-      }
-
       a {
         display: block;
+        padding: 5px 0;
         color: inherit;
         text-decoration: inherit;
         transition: 0.25s;
@@ -102,6 +105,56 @@ nav {
           transition: 0.25s;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 1001px) {
+  .nav-items {
+    display: block;
+  }
+}
+
+@media (max-width: 1000px) {
+  nav {
+    position: relative;
+    height: 75px;
+    width: 100%;
+    padding-left: 20px;
+    box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.2);
+    flex-direction: row;
+
+    // menu icon
+    .burger {
+      display: inline-block;
+      color: var(--color-tertiary);
+      transition: 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        color: white;
+      }
+    }
+
+    // nav items on mobile/tablet
+    .nav-items {
+      display: none;
+      position: absolute;
+      top: 66px;
+      left: 0;
+      animation: fadeInDown 0.3s;
+
+      .nav-item {
+        background: var(--color-primary);
+      }
+    }
+
+    // hide name, occupation, picture, social links
+    h1,
+    p,
+    .logo,
+    .social-items {
+      display: none;
     }
   }
 }

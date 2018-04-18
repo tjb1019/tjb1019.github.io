@@ -11,6 +11,7 @@ export class NavComponent implements OnInit {
 
   routes = routes;
   activeRoute: Route;
+  showMobileNav: boolean;
 
   constructor() { }
 
@@ -25,13 +26,19 @@ export class NavComponent implements OnInit {
       case '/projects':
         this.activeRoute = routes[2];
         break;
-      case '/contact':
+      case '/experience':
         this.activeRoute = routes[3];
         break;
-      case '/blog':
+      case '/contact':
         this.activeRoute = routes[4];
         break;
     }
+  }
+
+  toggleNav(): void {
+    const navItems = <HTMLElement>document.querySelector('.nav-items');
+    this.showMobileNav = !this.showMobileNav;
+    navItems.style.display = this.showMobileNav ? 'block' : 'none';
   }
 
 }

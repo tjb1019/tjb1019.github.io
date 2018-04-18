@@ -10,8 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { TechnicalComponent } from './components/technical/technical.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { BlogComponent } from './components/blog/blog.component';
 
 
 @NgModule({
@@ -22,8 +22,8 @@ import { BlogComponent } from './components/blog/blog.component';
     AboutComponent,
     TechnicalComponent,
     ProjectsComponent,
-    ContactComponent,
-    BlogComponent
+    ExperienceComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

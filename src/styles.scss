@@ -1,4 +1,6 @@
 @import 'variables';
+@import 'mixins';
+@import 'animations';
 @import 'utilities';
 @import 'osx';
 
@@ -11,15 +13,9 @@ html {
   box-sizing: inherit;
 }
 
-html,
 body {
-  height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
-}
-
-body {
   font-family: var(--font-primary);
   font-weight: 500;
   line-height: 1.5;
@@ -27,14 +23,63 @@ body {
 
 main {
   margin-left: 300px;
+  padding-bottom: 25px;
+  animation: fadeIn 0.5s;
 }
 
 section {
   padding: 0 100px;
 }
 
-h1 {
-  font-size: var(--header-size);
-  font-family: var(--header-font);
-  text-align: var(--header-align);
+header {
+  display: flex;
+  justify-content: center;
+
+  .title-container {
+    position: relative;
+    display: inline-block;
+    margin: 40px auto;
+    padding: 10px 25px;
+    background: var(--color-primary);
+    color: white;
+
+    &:after {
+      @include tilted-background();
+    }
+
+    h1 {
+      display: inline-block;
+      margin: 0;
+      font-size: var(--header-size);
+      font-family: var(--header-font);
+
+      &.page-title {
+        text-align: var(--header-align);
+      }
+    }
+  }
+}
+
+// tablet
+@media (max-width: 1100px) {
+  section {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    margin-left: 0;
+  }
+
+  section {
+    padding: 0 100px;
+  }
+}
+
+// mobile
+@media (max-width: 600px) {
+  section {
+    padding: 0 20px;
+  }
 }
