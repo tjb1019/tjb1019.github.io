@@ -1,11 +1,49 @@
 @import 'variables';
 
-.osx-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+.hash-container {
+  position: relative;
+  height: 100px;
+  margin-top: 20px;
+
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+
+  i {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    padding-right: 2rem;
+    color: var(--color-subtle);
+  }
 
   h2 {
-    color: var(--color-accent);
+    position: absolute;
+    left: 4rem;
+    margin: 2rem 0;
+    display: inline-block;
+    font-size: 4rem;
+    font-style: italic;
+  }
+}
+
+.item {
+  padding: 10px 0;
+
+  .lang {
+    padding-bottom: 5px;
+    font-size: 2rem;
+    font-weight: var(--weight-heavy);
+  }
+
+  .bar {
+    height: 25px;
+    width: 100%;
+    background: var(--color-subtle);
+
+    .bar-inner {
+      height: 25px;
+      background: var(--color-brand);
+    }
   }
 }
