@@ -1,9 +1,0 @@
-<ul class="nav-items">
-  <li class="nav-item" *ngFor="let route of routes">
-    <a routerLink="{{ route.path }}"
-       (click)="locationService.activeRoute = route"
-       [class.active]="route == locationService.activeRoute">
-      {{ route.name }}
-    </a>
-  </li>
-</ul>

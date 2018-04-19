@@ -9,12 +9,4 @@ export class LocationService {
 
   constructor() { }
 
-  select(route: Route): void {
-    this.activeRoute = route;
-  }
-
-  deselect(): void {
-    this.activeRoute = null;
-  }
-
 }

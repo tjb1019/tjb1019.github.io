@@ -12,7 +12,6 @@ import { TechnicalComponent } from './components/technical/technical.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { NavItemsComponent } from './components/nav-items/nav-items.component';
 
 
 @NgModule({
@@ -24,8 +23,7 @@ import { NavItemsComponent } from './components/nav-items/nav-items.component';
     TechnicalComponent,
     ProjectsComponent,
     ExperienceComponent,
-    ContactComponent,
-    NavItemsComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
