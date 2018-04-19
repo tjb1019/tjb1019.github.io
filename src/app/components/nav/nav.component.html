@@ -5,16 +5,7 @@
   <a class="logo" routerLink="/">
     <img (click)="activeRoute=null" src="assets/images/wine-tasting.jpg" alt="Tyler Burkhardt Headshot">
   </a>
-  <ul class="nav-items">
-    <li class="nav-item" *ngFor="let route of routes">
-      <a routerLink="{{ route.path }}"
-         (click)="activeRoute = route"
-         [class.active]="route == activeRoute">
-        {{ route.name }}
-      </a>
-    </li>
-
-  </ul>
+  <app-nav-items></app-nav-items>
   <ul class="social-items">
     <li class="social-item">
       <a href="https://github.com/tjb1019" target="_blank">

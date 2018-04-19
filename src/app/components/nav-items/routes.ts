@@ -1,9 +1,6 @@
-export interface Route {
-  path: string;
-  name: string;
-}
+import { Route } from '@models/route.model';
 
-export const routes = [
+export const routes: Route[] = [
   {
     path: '/about',
     name: 'About'
