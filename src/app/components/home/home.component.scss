@@ -34,3 +34,27 @@
     font-weight: var(--weight-light);
   }
 }
+
+@media (max-width: 600px) {
+  .intro {
+    width: 100%;
+    padding: 20px;
+    margin: 20px auto;
+    background: white;
+    color: var(--color-primary);
+    box-shadow: none;
+
+    &:after {
+      content: none;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p,
+    a {
+      color: var(--color-primary);
+    }
+  }
+}

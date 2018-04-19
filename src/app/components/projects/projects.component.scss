@@ -1,22 +1,17 @@
 @import 'variables';
 
 .hash-container {
-  position: relative;
-  height: 100px;
 
   i {
-    position: absolute;
-    top: 2rem;
-    left: 0;
-    padding-right: 2rem;
+    position: relative;
+    top: -1rem;
+    padding-right: 1rem;
     color: var(--color-subtle);
   }
 
   h2 {
-    position: absolute;
-    left: 4rem;
-    margin: 2rem 0;
     display: inline-block;
+    margin: 2rem 0;
     font-size: 4rem;
     font-style: italic;
   }
@@ -38,7 +33,7 @@
     display: block;
     font-size: 1.8rem;
     font-weight: var(--weight-light);
-    color: var(--color-secondary);
+    color: var(--color-primary);
   }
 
   .source {
@@ -50,5 +45,20 @@
 
   .description {
     font-size: 1.8rem;
+    color: var(--color-secondary);
+  }
+}
+
+@media (max-width: 600px) {
+  .hash-container {
+    i {
+      display: none;
+    }
+  }
+
+  .project {
+    h3 {
+      font-size: 2.5rem;
+    }
   }
 }
