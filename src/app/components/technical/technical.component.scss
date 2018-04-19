@@ -1,8 +1,6 @@
 @import 'variables';
 
 .hash-container {
-  position: relative;
-  height: 100px;
   margin-top: 20px;
 
   &:nth-child(1) {
@@ -10,18 +8,15 @@
   }
 
   i {
-    position: absolute;
-    top: 2rem;
-    left: 0;
-    padding-right: 2rem;
+    position: relative;
+    top: -1rem;
+    padding-right: 1rem;
     color: var(--color-subtle);
   }
 
   h2 {
-    position: absolute;
-    left: 4rem;
-    margin: 2rem 0;
     display: inline-block;
+    margin: 2rem 0;
     font-size: 4rem;
     font-style: italic;
   }
