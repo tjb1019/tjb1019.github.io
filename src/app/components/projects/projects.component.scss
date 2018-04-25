@@ -14,10 +14,12 @@
     margin: 2rem 0;
     font-size: 4rem;
     font-style: italic;
+    color: var(--color-primary);
   }
 }
 
 .project {
+  padding: 10px 0;
 
   & > a {
     text-decoration: none;
@@ -25,27 +27,31 @@
 
   h3 {
     margin: 0;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--color-brand);
   }
 
   .stack {
     display: block;
     font-size: 1.8rem;
-    font-weight: var(--weight-light);
     color: var(--color-primary);
   }
 
   .source {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: var(--weight-light);
     color: var(--color-tertiary);
     text-decoration: none;
+    transition: 0.2s;
+
+    &:hover {
+      color: hsl(0, 0%, 55%); // tertiary darkened 10%
+    }
   }
 
   .description {
     font-size: 1.8rem;
-    color: var(--color-secondary);
+    color: var(--color-primary);
   }
 }
 

@@ -3,13 +3,13 @@
   <h1>Tyler Burkhardt</h1>
   <p>Full-Stack Web Developer</p>
   <a class="logo" routerLink="/">
-    <img (click)="locationService.activeRoute=null" src="assets/images/wine-tasting.jpg" alt="Tyler Burkhardt Headshot">
+    <img (click)="activeRoute=null" src="assets/images/wine-tasting.jpg" alt="Tyler Burkhardt Headshot">
   </a>
   <ul class="nav-items">
     <li class="nav-item" *ngFor="let route of routes">
       <a routerLink="{{ route.path }}"
-         (click)="locationService.activeRoute = route"
-         [class.active]="route == locationService.activeRoute">
+         (click)="navigate(route)"
+         [class.active]="route == activeRoute">
         {{ route.name }}
       </a>
     </li>

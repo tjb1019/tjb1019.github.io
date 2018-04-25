@@ -52,6 +52,7 @@ header {
       margin: 0;
       font-size: var(--header-size);
       font-family: var(--header-font);
+      text-transform: uppercase;
 
       &.page-title {
         text-align: var(--header-align);

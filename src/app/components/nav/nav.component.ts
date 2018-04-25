@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { routes } from './routes';
 import { Route } from '@models/route.model';
-
-import { LocationService } from '@core/services/location.service';
 
 @Component({
   selector: 'app-nav',
@@ -13,34 +12,47 @@ import { LocationService } from '@core/services/location.service';
 export class NavComponent implements OnInit {
 
   routes = routes;
-  showMobileNav: boolean;
+  activeRoute: Route;
+  navItems: HTMLElement;
+  mobileVisible: boolean;
 
-  constructor(public locationService: LocationService) { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
     switch (window.location.pathname) {
       case '/about':
-        this.locationService.activeRoute = routes[0];
+        this.activeRoute = routes[0];
         break;
       case '/technical':
-        this.locationService.activeRoute = routes[1];
+        this.activeRoute = routes[1];
         break;
       case '/projects':
-        this.locationService.activeRoute = routes[2];
+        this.activeRoute = routes[2];
         break;
       case '/experience':
-        this.locationService.activeRoute = routes[3];
+        this.activeRoute = routes[3];
         break;
       case '/contact':
-        this.locationService.activeRoute = routes[4];
+        this.activeRoute = routes[4];
         break;
     }
   }
 
+  ngAfterViewInit() {
+    this.navItems = <HTMLElement>document.querySelector('.nav-items');
+  }
+
+  navigate(route: Route): void {
+    this.activeRoute = route;
+    if (this.mobileVisible) {
+      this.navItems.style.display = 'none';
+      this.mobileVisible = false;
+    }
+  }
+
   toggleNav(): void {
-    const navItems = <HTMLElement>document.querySelector('.nav-items');
-    this.showMobileNav = !this.showMobileNav;
-    navItems.style.display = this.showMobileNav ? 'block' : 'none';
+    this.mobileVisible = !this.mobileVisible;
+    this.navItems.style.display = this.mobileVisible ? 'block' : 'none';
   }
 
 }
