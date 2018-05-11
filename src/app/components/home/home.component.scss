@@ -29,7 +29,7 @@
   a {
     display: block;
     text-decoration: none;
-    font-family: var(--font-marker);
+    font-family: var(--font-code);
     font-size: 2rem;
     font-weight: var(--weight-light);
     transition: 0.2s;
@@ -40,14 +40,12 @@
       padding: 5px 15px;
       background: transparent;
       color: white;
-      border: 1px solid var(--color-tertiary);
-      border-radius: 500px;
+      border: 1px solid var(--color-brand);
       transition: 0.2s;
 
       &:hover {
-        background: white;
-        color: var(--color-primary);
-        border-color: white;
+        background: var(--color-brand);
+        transform: translateY(2px);
       }
     }
   }
@@ -83,9 +81,9 @@
       box-shadow: var(--shadow);
 
       &:hover {
-        background: white;
-        color: var(--color-primary);
-        border-color: var(--color-tertiary);
+        background: var(--color-brand);
+        border-color: var(--color-brand);
+        box-shadow: none;
       }
     }
   }
