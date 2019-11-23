@@ -3,13 +3,19 @@
 .osx {
   width: 100%;
   box-shadow: var(--shadow);
+  border-radius: 0 0 5px 5px;
 
   .osx-header {
     display: flex;
     align-items: center;
+    margin-top: 2rem;
     padding: 10px 5px;
     border-radius: 5px 5px 0 0;
     background: #e5e5e5;
+
+    &--dark {
+      background: var(--color-primary);
+    }
 
     .dot {
       margin: 0 3px;

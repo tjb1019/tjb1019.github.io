@@ -2,10 +2,6 @@ import { Route } from '@models/route.model';
 
 export const routes: Route[] = [
   {
-    path: '/about',
-    name: 'About'
-  },
-  {
     path: '/technical',
     name: 'Technical'
   },
